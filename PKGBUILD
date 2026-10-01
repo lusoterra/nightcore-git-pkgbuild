@@ -1,7 +1,7 @@
 # Maintainer: Lev <lev@lusosterone.net>
 pkgname=nightcore-git
 _pkgname=nightcore
-pkgver=r27.gda76c60
+pkgver=r30.ga4eb032
 pkgrel=1
 pkgdesc="Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)"
 arch=('any')
