@@ -1,0 +1,27 @@
+pkgbase = nightcore-git
+	pkgdesc = Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)
+	pkgver = r27.gda76c60
+	pkgrel = 1
+	url = https://git.lusosterone.net/lev/nightcore
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	depends = python
+	depends = ffmpeg
+	depends = sox
+	depends = rubberband
+	depends = flac
+	depends = opus-tools
+	depends = vorbis-tools
+	optdepends = lame: MP3 fallback when ffmpeg lacks libmp3lame
+	optdepends = bash-completion: bash completion
+	optdepends = zsh: zsh completion
+	provides = nightcore
+	conflicts = nightcore
+	source = nightcore::git+https://git.lusosterone.net/lev/nightcore
+	sha256sums = SKIP
+
+pkgname = nightcore-git
