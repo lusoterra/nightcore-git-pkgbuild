@@ -17,6 +17,7 @@ pkgbase = nightcore-git
 	depends = opus-tools
 	depends = vorbis-tools
 	optdepends = lame: MP3 fallback when ffmpeg lacks libmp3lame
+	optdepends = qaac-wine: High-quality AAC/ALAC encoding (CoreAudio via Wine)
 	optdepends = bash-completion: bash completion
 	optdepends = zsh: zsh completion
 	provides = nightcore

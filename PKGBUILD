@@ -18,6 +18,7 @@ depends=(
 )
 optdepends=(
   'lame: MP3 fallback when ffmpeg lacks libmp3lame'
+  'qaac-wine: High-quality AAC/ALAC encoding (CoreAudio via Wine)'
   'bash-completion: bash completion'
   'zsh: zsh completion'
 )
