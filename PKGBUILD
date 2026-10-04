@@ -1,7 +1,7 @@
 # Maintainer: Lev <lev@lusosterone.net>
 pkgname=nightcore-git
 _pkgname=nightcore
-pkgver=r31.gdc36ee1
+pkgver=r35.gdd1639f
 pkgrel=1
 pkgdesc="Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)"
 arch=('any')
@@ -9,6 +9,7 @@ url="https://git.lusosterone.net/lev/nightcore"
 license=('MIT')
 depends=(
   'python'
+  'python-mutagen'
   'ffmpeg'
   'sox'
   'rubberband'
@@ -17,7 +18,7 @@ depends=(
   'vorbis-tools'
 )
 optdepends=(
-  'lame: MP3 fallback when ffmpeg lacks libmp3lame'
+  'lame: preferred MP3 encoder (ffmpeg libmp3lame fallback)'
   'qaac-wine: High-quality AAC/ALAC encoding (CoreAudio via Wine)'
   'bash-completion: bash completion'
   'zsh: zsh completion'
