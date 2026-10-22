@@ -1,7 +1,7 @@
 # Maintainer: Lev <lev@lusosterone.net>
 pkgname=nightcore-git
 _pkgname=nightcore
-pkgver=r64.gc5fa974
+pkgver=r67.ga51a533
 pkgrel=1
 pkgdesc="Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)"
 arch=('any')
@@ -39,7 +39,18 @@ pkgver() {
 
 build() {
   cd "$_pkgname"
+  # Bake the commit hash into the wheel: the installed tree has no .git,
+  # no pip direct_url.json, so runtime detection would find nothing and
+  # --version would print the bare version without +gHASH. _git_hash.py
+  # is read first by nightcore/__init__.py::_detect_git_hash().
+  local _hash
+  _hash="$(git rev-parse --short HEAD)"
+  if ! git diff --quiet || ! git diff --cached --quiet; then
+    _hash="${_hash}.dirty"
+  fi
+  printf 'GIT_HASH = "%s"\n' "$_hash" > nightcore/_git_hash.py
   python -m build --wheel --no-isolation
+  rm -f nightcore/_git_hash.py
 }
 
 package() {
