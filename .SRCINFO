@@ -2,7 +2,7 @@ pkgbase = nightcore-git
 	pkgdesc = Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)
 	pkgver = r27.gda76c60
 	pkgrel = 1
-	url = https://git.lusosterone.net/lev/nightcore
+	url = https://github.com/lusoterra/nightcore.py
 	arch = any
 	license = MIT
 	makedepends = git
@@ -22,7 +22,7 @@ pkgbase = nightcore-git
 	optdepends = zsh: zsh completion
 	provides = nightcore
 	conflicts = nightcore
-	source = nightcore::git+https://git.lusosterone.net/lev/nightcore
+	source = nightcore::git+https://github.com/lusoterra/nightcore.py
 	sha256sums = SKIP
 
 pkgname = nightcore-git

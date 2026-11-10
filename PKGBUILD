@@ -1,11 +1,11 @@
 # Maintainer: Lev <lev@lusosterone.net>
 pkgname=nightcore-git
 _pkgname=nightcore
-pkgver=r67.ga51a533
+pkgver=r95.gb234202
 pkgrel=1
 pkgdesc="Bit-perfect nightcore/speed/pitch audio tool (ffmpeg, sox, rubberband)"
 arch=('any')
-url="https://git.lusosterone.net/lev/nightcore"
+url="https://github.com/lusoterra/nightcore.py"
 license=('MIT')
 depends=(
   'python'
